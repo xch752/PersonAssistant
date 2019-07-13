@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         Intent intent = getIntent();
         userName=intent.getStringExtra("userName");
-        Toast.makeText(MainActivity.this,intent.getStringExtra("userName"),Toast.LENGTH_LONG).show();
+        /*Toast.makeText(MainActivity.this,intent.getStringExtra("userName"),Toast.LENGTH_LONG).show();*/
     }
 
     @Override

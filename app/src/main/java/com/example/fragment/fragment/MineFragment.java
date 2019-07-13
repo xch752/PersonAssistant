@@ -19,6 +19,8 @@ import com.example.fragment.activity.MainActivity;
 import com.example.fragment.activity.NoteItemActivity;
 import com.example.fragment.activity.UpdatePassword;
 
+import cn.bmob.v3.BmobUser;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -73,6 +75,7 @@ public class MineFragment extends Fragment {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        BmobUser.logOut();
                         getActivity().finish();
                     }
                 });

@@ -63,7 +63,7 @@ public class UpdatePassword extends AppCompatActivity {
         Intent intent = getIntent();
         userName =  intent.getStringExtra("username");
 
-        Toast.makeText(UpdatePassword.this,userName,Toast.LENGTH_LONG).show();
+        Toast.makeText(UpdatePassword.this,"用户名:"+userName,Toast.LENGTH_LONG).show();
 
 
     }
