@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <SearchView
+            android:id="@+id/incomeSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="搜索类型" />
+
+        <!--<LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/coins"
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="40dp" />
+            <Button
+                android:id="@+id/incomeQueryMoney"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:text="金额查询"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_marginRight="5dp"/>
+            <ImageView
+                android:src="@drawable/time"
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"/>
+            <Button
+                android:id="@+id/incomeQueryDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:text="日期查询"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"/>
+
+        </LinearLayout>-->
+
+        <ListView
+            android:id="@+id/listView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </ListView>
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/incomeAddFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        android:src="@drawable/add"
+        app:backgroundTint="@color/white"
+        app:elevation="5dp"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        app:rippleColor="#cccccc">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/incomeRefreshFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:layout_gravity="bottom|right|fill_horizontal"
+        android:layout_margin="16dp"
+        android:src="@drawable/refresh"
+        app:backgroundTint="@color/white"
+        app:elevation="5dp"
+        app:pressedTranslationZ="12dp"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        app:rippleColor="#cccccc">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+</FrameLayout>

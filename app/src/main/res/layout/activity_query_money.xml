@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/iv_minMoney_pay"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight=".15"
+            android:src="@drawable/coins"
+            />
+        <EditText
+            android:id="@+id/payMinMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:ems="10"
+            android:hint="请输入最小金额"
+            android:inputType="number"
+            android:textColor="@color/black"/>
+        <ImageView
+            android:layout_below="@+id/iv_minMoney_pay"
+            android:id="@+id/iv_maxMoney"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight=".15"
+            android:src="@drawable/coins"
+            />
+        <EditText
+            android:id="@+id/payMaxMoney"
+            android:layout_below="@+id/iv_minMoney_pay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:ems="10"
+            android:hint="请输入最大金额"
+            android:inputType="number"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/payQueryMoneyActivity"
+            android:layout_below="@id/payMaxMoney"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight=".6"
+            android:background="@drawable/btn_bg_primary"
+            android:textColor="#FFFFFF"
+            android:text="查询"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            />
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/payListViewMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+    </ListView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+    <ListView
+        android:id="@+id/incomeListViewMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+    </ListView>
+
+</LinearLayout>

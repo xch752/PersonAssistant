@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <com.example.fragment.util.MultiLineRadioGroup
+            android:id="@+id/MultiLineRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income1"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/rb_income1"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="工资薪水"
+                    android:textColor="@drawable/radiobutton_textcolor"
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income2"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income2"
+                    android:textStyle="bold"
+                    android:text="礼金"
+                    android:textColor="@drawable/radiobutton_textcolor"
+                    />
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income3"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income3"
+                    android:textStyle="bold"
+                    android:text="贷款"
+                    android:textColor="@drawable/radiobutton_textcolor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income4"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income4"
+                    android:textStyle="bold"
+                    android:text="提成"
+                    android:textColor="@drawable/radiobutton_textcolor"/>
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income5"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income5"
+                    android:textStyle="bold"
+                    android:text="赞助费"
+                    android:textColor="@drawable/radiobutton_textcolor"/>
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income6"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income6"
+                    android:textStyle="bold"
+                    android:text="公司奖金"
+                    android:textColor="@drawable/radiobutton_textcolor"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income7"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income7"
+                    android:textStyle="bold"
+                    android:text="兼职"
+                    android:textColor="@drawable/radiobutton_textcolor"/>
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income8"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income8"
+                    android:textStyle="bold"
+                    android:text="投资收益"
+                    android:textColor="@drawable/radiobutton_textcolor"/>
+
+                <RadioButton
+                    android:drawableTop="@drawable/radiobutton_income9"
+                    android:button="@null"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_income9"
+                    android:textStyle="bold"
+                    android:text="其他收入"
+                    android:textColor="@drawable/radiobutton_textcolor"/>
+            </LinearLayout>
+        </com.example.fragment.util.MultiLineRadioGroup>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/iv_time_income"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/time"
+                />
+            <TextView
+                android:id="@+id/et_date_income"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="请选择日期"/>
+
+
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/iv_time_income"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/iv_money_income"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/coins"
+                />
+            <EditText
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/iv_time_income"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:id="@+id/et_money_income"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="请输入金额"
+                android:inputType="number"  />
+
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/iv_free_income"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/text"
+                android:layout_below="@+id/iv_money_income"
+                />
+            <EditText
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/et_free_income"
+                android:layout_marginRight="80dp"
+                android:layout_marginLeft="80dp"
+                android:layout_below="@id/iv_money_income"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="请输入备注"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btn_write_income"
+                android:layout_below="@id/et_free_income"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_bg_primary"
+                android:textColor="#FFFFFF"
+                android:text="保存"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
