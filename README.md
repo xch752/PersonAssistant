@@ -1,7 +1,6 @@
 # PersonAssistant# PersonAssistant
 ------
-个人助理安卓APP
-![avatar](/screenshot/welcome.png)
-![avatar](/screenshot/login.png)
-![avatar](/screenshot/main.png)
+<img src="/screenshot/welcome.png" width="50%" height="50%" />
+<img src="/screenshot/login.png" width="50%" height="50%" />
+<img src="/screenshot/main.png" width="50%" height="50%" />
 
