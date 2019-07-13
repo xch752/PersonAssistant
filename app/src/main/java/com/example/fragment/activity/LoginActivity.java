@@ -72,7 +72,9 @@ public class LoginActivity extends AppCompatActivity {
         //如果上次登录选了自动登录，那进入登录页面也自动勾选自动登录
         if(choseAutoLogin){
             autologin.setChecked(true);
+            userNameValue=name;
             Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+            intent.putExtra("userName",userNameValue);
             startActivity(intent);
         }
 
@@ -118,6 +120,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             //跳转
                             Intent intent =new Intent(LoginActivity.this,MainActivity.class);
+                            intent.putExtra("userName",userNameValue);
                             startActivity(intent);
 
                         } else {

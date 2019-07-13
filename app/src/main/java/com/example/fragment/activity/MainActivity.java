@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //标记当前显示的Fragment
     private int fragmentId = 0;
 
+    private String userName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //设置第一个Fragment默认选中
             setFragment(0);
         }
+        Intent intent = getIntent();
+        userName=intent.getStringExtra("userName");
+        Toast.makeText(MainActivity.this,intent.getStringExtra("userName"),Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -209,6 +213,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     mineFragment = new MineFragment();
                     mTransaction.add(R.id.container, mineFragment,
                             "mine_fragment");
+                    Bundle bundle = new Bundle();
+                    bundle.putString("username",userName);//这里的values就是我们要传的值
+                    mineFragment.setArguments(bundle);
                 }else {
                     mTransaction.show(mineFragment);
                 }

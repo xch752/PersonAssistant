@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -15,15 +16,17 @@ import androidx.fragment.app.Fragment;
 import com.example.fragment.R;
 import com.example.fragment.activity.IncomeItemActivity;
 import com.example.fragment.activity.MainActivity;
+import com.example.fragment.activity.NoteItemActivity;
+import com.example.fragment.activity.UpdatePassword;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MineFragment extends Fragment {
 
-    private Button logoutButton;
+    private Button logoutButton,updatePasswordButton;
 
-
+    private String userName;
     public MineFragment() {
         // Required empty public constructor
     }
@@ -38,6 +41,17 @@ public class MineFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 showNormalDialog();
+            }
+        });
+        updatePasswordButton=view.findViewById(R.id.updatePasswordButton);
+        userName=(String)getArguments().get("username");
+
+        updatePasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity().getApplicationContext(), UpdatePassword.class);
+                intent.putExtra("username",userName);
+                startActivity(intent);
             }
         });
         // Inflate the layout for this fragment
